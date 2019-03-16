@@ -1274,7 +1274,20 @@ input, select, textarea {
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
+			-moz-animation: flipper 9s infinite linear;
+   			-o-animation: flipper 9s infinite linear;    
+    		-webkit-animation: flipper 9s infinite linear;
+  			animation: flipper 9s infinite linear;
 		}
+			@-webkit-keyframes flipper {
+				0% { transform: rotateY(0deg); }
+				100% { transform: rotateY(360deg); }
+			}
+			
+			@keyframes flipper {
+				0% { transform: rotateY(0deg); }
+				100% { transform: rotateY(360deg); }
+			}
 
 			#header .logo .icon:before {
 				font-size: 2rem;
